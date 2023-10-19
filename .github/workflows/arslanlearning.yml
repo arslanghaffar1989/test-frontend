@@ -24,7 +24,7 @@ jobs:
 
       - name: Build React app
         run: |
-          cd test-frontend
+          cd frontend
           npm run build
 
   deploy-to-s3:
