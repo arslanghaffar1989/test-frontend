@@ -43,8 +43,10 @@ jobs:
           name: react-build
           path: frontend/build/
 
-      - name: Checkout repository
-        uses: actions/checkout@v2
+      - name: Set working directory
+        run: |
+          pwd
+          ls -al ./frontend/build
 
       - name: Deploy build to S3
         uses: jakejarvis/s3-sync-action@master
@@ -56,4 +58,3 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: global # Change this to your AWS S3 region
           SOURCE_DIR: 'frontend/build'
-
