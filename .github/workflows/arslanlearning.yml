@@ -42,4 +42,4 @@ jobs:
           bucket-name: react-build-testing
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: us-west-1 # Change this to your AWS S3 region
+          aws-region: global # Change this to your AWS S3 region
