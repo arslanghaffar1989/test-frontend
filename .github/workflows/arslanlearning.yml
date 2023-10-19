@@ -19,7 +19,7 @@ jobs:
 
       - name: Navigate to test-frontend and install dependencies
         run: |
-          cd test-frontend
+          cd frontend
           npm ci
 
       - name: Build React app
